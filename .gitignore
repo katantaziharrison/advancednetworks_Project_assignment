@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Allow Git to check inside subfolders
+!*/
+
+# Track these files
+!.gitignore
+!*.tex
+!*.pdf

@@ -1,10 +1,34 @@
 # Ignore everything by default
 *
 
-# Allow Git to check inside subfolders
+# Check subfolders and keep this file
 !*/
-
-# Track these files
 !.gitignore
+
+# LaTeX sources and PDFs
 !*.tex
 !*.pdf
+
+# Bibliography files and styles
+!*.bib
+!*.bst
+!*.bbx
+!*.cbx
+
+# Document classes, packages, and configuration
+!*.cls
+!*.sty
+!*.clo
+!*.def
+!*.cfg
+
+# Images
+!*.png
+!*.jpg
+!*.jpeg
+!*.svg
+!*.eps
+
+# Custom fonts
+!*.ttf
+!*.otf

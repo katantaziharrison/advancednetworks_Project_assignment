@@ -1,0 +1,168 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs,tabularx,array}
+\definecolor{Navy}{HTML}{102A43}
+\definecolor{Blue}{HTML}{005C91}
+\definecolor{Muted}{HTML}{42586B}
+\definecolor{Light}{HTML}{DBEAF3}
+\definecolor{White}{HTML}{FFFFFF}
+
+\setbeamercolor{normal text}{fg=Navy,bg=White}
+\setbeamercolor{frametitle}{fg=Navy,bg=White}
+\setbeamercolor{structure}{fg=Blue}
+\setbeamercolor{footline}{fg=Muted,bg=White}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamersize{text margin left=0.85cm,text margin right=0.85cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \leavevmode\hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=2.8ex,dp=1.6ex,leftskip=.85cm,rightskip=.85cm]{footline}
+  \scriptsize From 5G to 6G\hfill\insertframenumber\,/\,\inserttotalframenumber
+  \end{beamercolorbox}}}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip\vskip.56cm%
+  \begin{beamercolorbox}[wd=\textwidth,sep=0pt,leftskip=0pt]{frametitle}
+  \usebeamerfont{frametitle}\insertframetitle\par
+  \vskip.20cm{\color{Light}\hrule height .8pt}
+  \end{beamercolorbox}}
+\setbeameroption{hide notes}
+% Change hide notes to show notes to compile a rehearsal copy with speaker notes.
+\hypersetup{pdftitle={From 5G to 6G: Emerging Cybersecurity Challenges and Implications for Industry},
+  colorlinks=true,urlcolor=Blue}
+\newcommand{\status}[1]{{\small\bfseries\color{Blue}#1}}
+\newcommand{\source}[1]{\par\vfill{\footnotesize\color{Muted}#1}\par\vspace{.18cm}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+{
+\setbeamercolor{background canvas}{bg=Navy}
+\begin{frame}[plain,t]
+\vspace{.76cm}
+{\color{Light}\small\bfseries ADVANCED NETWORKS AND SECURITY \hspace{.22cm} / \hspace{.22cm} HALMSTAD UNIVERSITY\par}
+\vspace{.67cm}
+{\color{White}\fontsize{37}{39}\selectfont\bfseries From 5G to 6G\par}
+\vspace{.24cm}
+{\color{White}\Large Emerging cybersecurity challenges\\[.13cm] and implications for industry\par}
+\vspace{.50cm}
+{\color{Light}\rule{1.45cm}{1.5pt}\par}
+\vspace{.26cm}
+{\color{Light}\normalsize Literature review proposal \hspace{.35cm} 9 November 2026\par}
+{\color{Light}\rule{1.45cm}{1.5pt}\par}
+\vspace{.26cm}
+{\color{Light}\Large Harrison Katantazi and Joshua Akhigbemen \hspace{.35cm}\par}
+\note{Speaker 1, 15 seconds. Today we are proposing a review of what the move from 5G to 6G could mean for cybersecurity teams. We will explain the question, the sources and how we plan to compare them.}
+\end{frame}
+}
+
+\begin{frame}[t]{Research question}
+\vspace{.38cm}
+{\Large\bfseries How might proposed 6G capabilities change the way cybersecurity teams secure, test, and monitor wireless networks compared with 5G?\par}
+\vspace{.58cm}
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{.46\textwidth}
+  \status{5G baseline}\par\vspace{.12cm}
+  Published 5G security architecture and procedures.
+  \end{column}
+  \begin{column}{.48\textwidth}
+  \status{6G scope}\par\vspace{.12cm}
+  Capabilities described in the ITU's IMT-2030 framework and related research.
+  \end{column}
+\end{columns}
+\source{Sources [1], [2], [4]}
+\note{Speaker 1, 55 seconds. IMT-2030 is the ITU framework for the next generation of mobile communications. We start from an established 5G specification and use 6G publications to identify proposed capabilities. We interpret their potential implications for security practice. Deployment and adoption will determine how those implications play out.}
+\end{frame}
+
+\begin{frame}[t]{Three areas for comparison}
+\vspace{.38cm}
+\renewcommand{\arraystretch}{1.36}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.62cm}Y@{}}
+\toprule
+\textbf{6G capability} & \textbf{Security question for practitioners}\\
+\midrule
+\textbf{AI in networks} & How could teams detect manipulated model inputs and review automated decisions?\\
+\textbf{Wireless sensing} & Who can request sensing and who can access the results?\\
+\textbf{IoT at greater scale} & How could operators revoke credentials across larger fleets?\\
+\bottomrule
+\end{tabularx}
+\vspace{.18cm}
+
+{\footnotesize\color{Muted}ISAC combines wireless communication with sensing.}
+\source{Capability and risk context [1], [3], [5]. Security questions are proposed by our group.}
+\note{Speaker 1, 60 seconds. These questions cover different parts of cybersecurity work. The AI example concerns monitoring and accountability. Wireless sensing uses radio signals to observe the environment, which raises access and privacy questions. The IoT example concerns operating security controls at scale. The three questions are our interpretation of the literature.}
+\end{frame}
+
+\begin{frame}[t]{Review method}
+\vspace{.37cm}
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{.31\textwidth}
+  \status{01\quad Select sources}\par\vspace{.18cm}
+  Use standards documents and peer-reviewed research relevant to the three areas.
+  \end{column}
+  \begin{column}{.30\textwidth}
+  \status{02\quad Extract claims}\par\vspace{.18cm}
+  Record each claim, its source, and whether it is a specification, proposal, or research finding.
+  \end{column}
+  \begin{column}{.31\textwidth}
+  \status{03\quad Compare}\par\vspace{.18cm}
+  Link each capability to a potential change in security practice and explain what remains uncertain.
+  \end{column}
+\end{columns}
+\vspace{.72cm}
+
+{\large\bfseries Method\quad Focused literature review\par}
+\vspace{.15cm}
+{\color{Muted}Analysis of published documents, with the same comparison criteria for each area.\par}
+\source{Source set [1]--[5]}
+\note{Speaker 2, 50 seconds. We will record the document section or page for each claim. A standard, a research proposal and an inference have different evidential weight. The comparison is based on published material. For each proposed implication we will explain the reasoning and identify what remains unverified.}
+\end{frame}
+
+\begin{frame}[t]{Worked example for IoT device security}
+\vspace{.36cm}
+\renewcommand{\arraystretch}{1.37}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.10cm}Y@{}}
+\toprule
+\textbf{Evidence status} & \textbf{What we can say}\\
+\midrule
+\textbf{Specified in 5G} & 5G specifies subscription and network authentication. [2]\\
+\textbf{6G framework objective} & IMT-2030 builds on the 5G scenario for connecting large numbers of devices. [1]\\
+\textbf{Our inference} & Operators may need to assess whether credential management and revocation can scale to larger fleets.\\
+\bottomrule
+\end{tabularx}
+\vspace{.28cm}
+
+{\footnotesize\color{Muted}The impact depends on network design and deployment choices.}
+\source{5G security requirements [2, Section 5.1.2]. IMT-2030 usage scenarios [1].}
+\note{Speaker 2, 75 seconds. Authentication already exists in 5G. The 6G objective we found in the framework is to support massive communication. From these two sources, we derive a question about managing credentials across larger fleets. The sources establish the baseline and the direction. The impact on operational teams remains a conditional implication.}
+\end{frame}
+
+\begin{frame}[t]{Proposed contribution}
+\vspace{.38cm}
+{\Large\bfseries A comparison matrix that connects 6G research to the work cybersecurity teams do.\par}
+\vspace{.43cm}
+\begin{itemize}
+\setlength{\itemsep}{.23cm}
+  \item Identify which existing 5G security practices provide a baseline.
+  \item Show where a proposed capability raises a new testing or monitoring question.
+  \item State what evidence would help assess the potential impact in practice.
+\end{itemize}
+\vspace{.30cm}
+
+{\color{Muted}The review will separate conclusions supported by published documents from questions for future deployments.}
+\note{Speaker 2, 40 seconds. Our proposed contribution is to organise the evidence around practitioner tasks, such as what to test and what to monitor. We will trace each implication to the source and say where operational evidence is still needed.}
+\end{frame}
+
+\begin{frame}[t]{Core references}
+\vspace{.27cm}
+\small
+\begin{enumerate}
+\setlength{\itemsep}{.25cm}
+\item \textbf{ITU-R (2023).} \href{https://www.itu.int/rec/R-REC-M.2160-0-202311-I/en}{Recommendation M.2160-0, \emph{Framework and overall objectives of the future development of IMT for 2030 and beyond}.}
+\item \textbf{3GPP (2022).} \href{https://www.etsi.org/deliver/etsi_ts/133500_133599/133501/15.15.00_60/ts_133501v151500p.pdf}{TS 33.501 v15.15.0, \emph{Security architecture and procedures for 5G System}.}
+\item \textbf{ETSI (2026).} \href{https://www.etsi.org/deliver/etsi_gr/ISC/001_099/004/01.01.01_60/gr_isc004v010101p.pdf}{GR ISC 004, \emph{Integrated Sensing And Communications (ISAC). Security, Privacy, Trustworthiness and Sustainability}.}
+\item \textbf{Porambage et al. (2021).} \href{https://doi.org/10.1109/OJCOMS.2021.3078081}{\emph{The Roadmap to 6G Security and Privacy}. IEEE Open Journal of the Communications Society.}
+\item \textbf{De Alwis et al. (2026).} \href{https://doi.org/10.1109/COMST.2026.3663434}{\emph{Federated Learning for 6G Security: A Survey on Threats, Solutions, and Research Directions}. IEEE Communications Surveys \& Tutorials.}
+\end{enumerate}
+\note{Reference slide. The numbered references link to their official documents or DOI pages. The IEEE articles provide peer-reviewed background. The ITU, 3GPP and ETSI documents ground the framework, baseline and sensing risks.}
+\end{frame}
+\end{document}

@@ -1,56 +1,78 @@
-% Chapter 3
+\chapter{Methodology}
+\label{ch:methodology}
 
-\chapter{Math Test Chapter} % Chapter title
+\section{Research Design}
 
-\label{ch:mathtest} % For referencing the chapter elsewhere, use \autoref{ch:mathtest}
+This project will use a focused literature review to
+compare established 5G security mechanisms with proposed
+6G capabilities. The analysis will address AI in network
+operations, integrated sensing and communication, and
+large-scale IoT connectivity.
 
-%----------------------------------------------------------------------------------------
+The review will examine how published security concerns
+could affect the tasks of securing, testing, and monitoring
+wireless networks. Its findings will consist of a
+documented comparison and critical interpretation of
+the selected literature.
 
-\lipsum[13]
+\section{Source Selection}
 
-%----------------------------------------------------------------------------------------
+The initial source set comprises the five core documents
+introduced in the preceding chapters. These include the
+selected 5G security specification, the IMT-2030 framework,
+the ETSI ISAC report, and two peer-reviewed surveys.
 
-\section{Some Formulas}
+Additional sources will be considered where a comparison
+requires further support. Selection will prioritize
+peer-reviewed publications and official technical documents
+that directly address one of the three capability areas.
+The publication or revision date, document version,
+and relevance to the research question will be recorded.
 
-Due to the statistical nature of ionisation energy loss, large fluctuations can occur in the amount of energy deposited by a particle traversing an absorber element\footnote{Examples taken from Walter Schmidt's great gallery: \\ \url{http://home.vrweb.de/~was/mathfonts.html}}.  Continuous processes such as multiple scattering and energy loss play a relevant role in the longitudinal and lateral development of electromagnetic and hadronic showers, and in the case of sampling calorimeters the measured resolution can be significantly affected by such fluctuations in their active layers.  The description of ionisation fluctuations is characterised by the significance parameter $\kappa$, which is proportional to the ratio of mean energy loss to the maximum allowed energy transfer in a single collision with an atomic electron: \graffito{You might get unexpected results using math in chapter or section heads. Consider the \texttt{pdfspacing} option.}
-\begin{equation}
-\kappa =\frac{\xi}{E_{\mathrm{max}}} %\mathbb{ZNR}
-\end{equation}
-$E_{\mathrm{max}}$ is the maximum transferable energy in a single collision with an atomic electron.
-\[E_{\mathrm{max}} =\frac{2 m_{\mathrm{e}} \beta^2\gamma^2 }{1 + 2\gamma m_{\mathrm{e}}/m_{\mathrm{x}} + \left ( m_{\mathrm{e}} /m_{\mathrm{x}}\right)^2}\ ,\]
-where $\gamma = E/m_{\mathrm{x}}$, $E$ is energy and $m_{\mathrm{x}}$ the mass of the incident particle, $\beta^2 = 1 - 1/\gamma^2$ and $m_{\mathrm{e}}$ is the electron mass. $\xi$ comes from the Rutherford scattering cross section and is defined as:
-\begin{eqnarray*} \xi  = \frac{2\pi z^2 e^4 N_{\mathrm{Av}} Z \rho
-\delta x}{m_{\mathrm{e}} \beta^2 c^2 A} =  153.4 \frac{z^2}{\beta^2}
-\frac{Z}{A}
-\rho \delta x \quad\mathrm{keV},
-\end{eqnarray*}
-where
+Sources will be assessed according to their technical
+detail, supporting evidence, and stated limitations.
+Broad predictions without a clear supporting argument
+will receive limited weight in the analysis.
 
-\begin{tabular}{ll}
-$z$ & charge of the incident particle \\
-$N_{\mathrm{Av}}$ & Avogadro's number \\
-$Z$ & atomic number of the material \\
-$A$ & atomic weight of the material \\
-$\rho$ & density \\
-$ \delta x$ & thickness of the material \\
-\end{tabular}
+\section{Data Extraction and Comparison}
 
-$\kappa$ measures the contribution of the collisions with energy transfer close to $E_{\mathrm{max}}$.  For a given absorber, $\kappa$ tends towards large values if $\delta x$ is large and/or if $\beta$ is small.  Likewise, $\kappa$ tends towards zero if $\delta x $ is small and/or if $\beta$ approaches $1$.
-
-The value of $\kappa$ distinguishes two regimes which occur in the description of ionisation fluctuations:
+Relevant passages will be recorded with their section
+or page references. For each capability area, the
+comparison matrix will contain:
 
 \begin{enumerate}
-\item A large number of collisions involving the loss of all or most of the incident particle energy during the traversal of an absorber.
-
-As the total energy transfer is composed of a multitude of small energy losses, we can apply the central limit theorem and describe the fluctuations by a Gaussian distribution. This case is applicable to non-relativistic particles and is described by the inequality $\kappa > 10 $ (\ie, when the mean energy loss in the absorber is greater than the maximum energy transfer in a single collision).
-
-\item Particles traversing thin counters and incident electrons under any conditions.
-
-The relevant inequalities and distributions are $ 0.01 < \kappa < 10 $, Vavilov distribution, and $\kappa < 0.01 $, Landau distribution.
+    \item The relevant existing 5G security mechanism
+          or practitioner task.
+    \item The proposed 6G capability and its source.
+    \item The security or privacy concern identified
+          in the literature.
+    \item The potential implication for securing,
+          testing, or monitoring the network.
+    \item The evidence status, assumptions, and
+          remaining uncertainties.
 \end{enumerate}
 
-%----------------------------------------------------------------------------------------
+Claims will be classified as specified mechanisms,
+framework objectives, proposed solutions, or reported
+findings. Implications derived by the project authors
+will be explicitly identified as interpretations and
+linked to the passages supporting them.
 
-\section{Various Mathematical Examples}
+\section{Quality Checks and Limitations}
 
-If $n > 2$, the identity \[t[u_1,\dots,u_n] = t\bigl[t[u_1,\dots,u_{n_1}], t[u_2,\dots,u_n] \bigr]\] defines $t[u_1,\dots,u_n]$ recursively, and it can be shown that the alternative definition \[t[u_1,\dots,u_n] = t\bigl[t[u_1,u_2],\dots,t[u_{n-1},u_n]\bigr]\] gives the same result.
+Both group members will review the completed matrix
+and check whether the cited passages support each
+entry. Differences in interpretation will be resolved
+by returning to the original sources.
+
+The proposed contribution will also be compared with
+the selected surveys to identify which aspects they
+already address and what additional organization or
+analysis our comparison provides.
+
+The focused source selection limits the completeness
+of the review. Furthermore, differences in document
+purpose and maturity may restrict direct comparisons.
+Conclusions about future operational effects will
+therefore remain conditional on the assumptions
+identified in the literature.

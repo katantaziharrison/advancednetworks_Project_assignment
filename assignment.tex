@@ -1,0 +1,284 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{heading}{HTML}{164B70}
+\titleformat{\section}{\normalsize\bfseries\color{heading}}
+  {\thesection.}{0.4em}{}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\columnsep}{7mm}
+\setlength{\multicolsep}{4pt}
+\setlist[itemize]{leftmargin=*,nosep,topsep=2pt}
+\setlist[enumerate]{leftmargin=*,nosep,topsep=2pt}
+\setlength{\emergencystretch}{1.5em}
+\urlstyle{same}
+\pagestyle{plain}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Cybersecurity and Digital Forensics}\\[2pt]
+%{\small Two-page revision notes}
+{\large\bfseries Harrison Katantazi}
+\end{center}
+\vspace{-6pt}
+
+% ==================== PAGE 1 ====================
+\begin{multicols}{2}
+\raggedcolumns
+
+\section{Cyber Threat Sources and Actors}
+
+A \textbf{threat source} is a person, condition, or circumstance
+that could harm information systems. NIST identifies four
+categories [1]:
+\begin{itemize}
+\item \textbf{Adversarial:} Deliberate harmful activity.
+Example: criminals steal customer records.
+\item \textbf{Accidental:} Unintentional human errors.
+Example: an administrator exposes confidential cloud files.
+\item \textbf{Structural:} Hardware, software, or equipment
+failures. Example: a failed disk makes data unavailable.
+\item \textbf{Environmental:} Natural disasters or external
+infrastructure failures. Example: flooding or a power outage.
+\end{itemize}
+
+A \textbf{threat actor} is an individual or group deliberately
+conducting harmful cyber activity. Actors are one type of
+threat source. Common categories include [2]:
+\begin{itemize}
+\item \textbf{Cybercriminals:} Seek money; for example,
+a ransomware group demanding payment.
+\item \textbf{State-sponsored actors:} Pursue government
+objectives; for example, stealing sensitive research.
+\item \textbf{Hacktivists:} Pursue political or ideological
+goals; for example, disrupting a website in protest.
+\item \textbf{Malicious insiders:} Misuse authorised access;
+for example, an employee selling confidential records.
+\item \textbf{Thrill-seekers:} Seek recognition or satisfaction;
+for example, breaking into a website to demonstrate ability.
+\item \textbf{Terrorist groups:} Seek intimidation or ideological
+violence; for example, attempting to disrupt critical services.
+\end{itemize}
+
+\textbf{Distinction:} Accidental database deletion is an
+accidental threat source; deliberate deletion for revenge
+involves a malicious insider threat actor.
+
+\section{Code of Practice for Information Security}
+
+\textbf{ISO/IEC 17799} specified the \textit{Code of Practice
+for Information Security Management}. It was renumbered
+\textbf{ISO/IEC 27002}. The current edition is
+\textbf{ISO/IEC 27002:2022}, \textit{Information Security,
+Cybersecurity and Privacy Protection---Information Security
+Controls}. It provides control guidance; ISO/IEC 27001
+specifies ISMS requirements [3].
+
+\columnbreak
+
+\section{Chain of Custody: RFC 3227}
+
+The \textbf{chain of custody} is the documented history of
+evidence: how it was discovered, handled, stored, and
+transferred. Section~4.1 specifies recording [4]:
+\begin{enumerate}
+\item \textbf{Discovery and collection:} Where, when,
+and by whom evidence was found and collected.
+\item \textbf{Handling and examination:} Where, when,
+and by whom it was handled or examined.
+\item \textbf{Custody and storage:} Each custodian,
+the period of custody, and storage arrangements.
+\item \textbf{Transfers:} When and how custody changed,
+including shipping or tracking numbers where applicable.
+\end{enumerate}
+
+Evidence must be securely protected. Section~4.2 calls for
+strictly restricted, documented access and the ability to
+detect unauthorised access. These measures support
+traceability, authenticity, and reliable handling.
+
+\textbf{Example:} Record who collected a drive, who examined
+it, where it was secured, and every handover.
+
+\section{Forensics in Incident Response}
+
+Forensic techniques preserve evidence, establish what
+happened, and guide response decisions [5].
+\begin{enumerate}
+\item \textbf{Prepare:} Train responders, configure logging,
+prepare tools, and define evidence handling procedures.
+\item \textbf{Collect and preserve:} Acquire relevant logs,
+network traffic, memory, and disk images. Prioritise volatile
+data where appropriate, verify integrity using hashes,
+and maintain a chain of custody.
+\item \textbf{Examine and analyse:} Extract relevant information,
+reconstruct the timeline, investigate the entry point,
+and assess affected systems and data.
+\item \textbf{Contain and recover:} Use findings to isolate
+compromised systems, remove malicious components, address
+vulnerabilities, and support safe restoration.
+\item \textbf{Report and improve:} Document methods,
+findings, limitations, and actions; improve controls and
+response procedures.
+\end{enumerate}
+
+\textbf{Operational balance:} Preserve evidence while
+considering the urgency of stopping harm and maintaining
+essential services.
+
+\textbf{Example:} During ransomware response, preserve
+available memory and logs, analyse forensic copies,
+identify affected systems, and guide containment and recovery.
+
+\end{multicols}
+
+\newpage
+
+% ==================== PAGE 2 ====================
+\begin{multicols}{2}
+\raggedcolumns
+
+\section{NIS 2 Directive}
+
+\textbf{Directive (EU) 2022/2555} strengthens cybersecurity
+across the EU and replaces NIS~1. NIS refers to
+\textit{Network and Information Systems} [6].
+\begin{itemize}
+\item \textbf{Scope:} Essential and important entities in
+sectors including energy, transport, healthcare, water,
+and digital infrastructure; generally medium-sized and
+large entities, with exceptions.
+\item \textbf{Risk management:} Incident handling, business
+continuity, supply chain security, and vulnerability management.
+\item \textbf{Accountability:} Management approves and
+oversees cybersecurity risk-management measures.
+\item \textbf{Reporting:} Significant incidents generally
+require an early warning within \textbf{24 hours} of awareness,
+notification within \textbf{72 hours}, and a final report
+within \textbf{one month after notification}. Special rules
+apply to trust service providers and ongoing incidents.
+\item \textbf{Implementation:} Member States transpose
+the directive into national law, with supervision,
+enforcement, and cross-border cooperation.
+\end{itemize}
+\textbf{Example:} A covered hospital must manage cyber risks
+and report significant incidents.
+
+\section{Cyber Resilience Act}
+
+\textbf{Regulation (EU) 2024/2847} establishes cybersecurity
+requirements for products with digital elements supplied
+commercially on the EU market. It generally covers hardware
+and software connecting directly or indirectly to devices
+or networks, subject to exclusions [7].
+\begin{itemize}
+\item \textbf{Security by design:} Assess product risks
+and integrate appropriate protections.
+\item \textbf{Ongoing support:} Handle vulnerabilities,
+provide security updates, and state the support end date.
+\item \textbf{Compliance:} Technical documentation,
+conformity assessment, and CE marking; some categories
+require independent assessment.
+\item \textbf{Reporting:} Manufacturers report actively
+exploited vulnerabilities and severe product-security
+incidents: early warning within \textbf{24 hours} and
+notification within \textbf{72 hours} of awareness.
+\end{itemize}
+\textbf{Dates:} Entered into force 10 December 2024;
+manufacturer reporting began 11 September 2026;
+main requirements apply 11 December 2027.
+
+\textbf{Example:} A connected-camera manufacturer must
+address security risks and provide support-period updates.
+
+\columnbreak
+
+\section{Zero Trust: NIST SP 800-207}
+
+Zero Trust removes automatic trust based on network
+location or ownership. Access depends on verified identity,
+device security, and policy [8].
+
+\textbf{Seven principles:}
+\begin{enumerate}
+\item Treat data sources and computing services as resources.
+\item Secure communications on every network.
+\item Authorise each session with least privilege.
+\item Use dynamic, context-aware access policies.
+\item Monitor asset integrity and security posture.
+\item Authenticate and authorise before access;
+reevaluate ongoing sessions according to policy.
+\item Use asset, network, and access information to
+improve security.
+\end{enumerate}
+
+\textbf{Components:} The \textbf{Policy Engine} decides
+whether access is allowed; the \textbf{Policy Administrator}
+executes decisions; the \textbf{Policy Enforcement Point}
+enables, monitors, and terminates connections.
+
+\textbf{Example:} An office employee still needs authorisation
+and a sufficiently secure device to access a sensitive database.
+
+\section{Adversarial ML: NIST AI 100-2e2025}
+
+This March~2025 report provides shared terminology for
+attacks and mitigations affecting predictive and generative
+AI. It classifies threats by lifecycle stage, attacker
+objectives, capabilities, knowledge, and data modality [9].
+
+\textbf{Predictive AI attacks:}
+\begin{itemize}
+\item \textbf{Evasion:} Manipulated inputs cause incorrect
+predictions during use.
+\item \textbf{Poisoning:} Corrupted training data or models
+alter behaviour, potentially introducing backdoors.
+\item \textbf{Privacy attacks:} Extract sensitive data or
+information about the model.
+\end{itemize}
+
+\textbf{Generative AI:} Covers supply chain poisoning,
+direct prompting attacks, indirect prompt injection through
+external content, and AI agent security.
+
+\textbf{Mitigations:} Adversarial training, data sanitisation,
+model inspection, differential privacy, and prompt-injection
+detection.
+
+\textbf{Limitations:} Defences involve trade-offs in accuracy,
+privacy, robustness, and cost, and require rigorous evaluation
+against capable attackers. The report offers voluntary
+guidance for understanding and assessing AI security risks.
+
+\end{multicols}
+
+\vspace{1pt}
+\hrule
+\vspace{3pt}
+{\footnotesize
+\textbf{Official references} \quad
+\href{https://doi.org/10.6028/NIST.SP.800-30r1}{[1] NIST SP 800-30 Rev.~1};
+\href{https://www.cyber.gc.ca/en/guidance/introduction-cyber-threat-environment}{[2] Canadian Centre for Cyber Security: Threat Environment};
+\href{https://www.iso.org/standard/50297.html}{[3] ISO/IEC 27002 (history)}
+and \href{https://www.iso.org/standard/75652.html}{2022 edition};
+\href{https://www.rfc-editor.org/rfc/rfc3227.html}{[4] RFC 3227, Sections 4.1--4.2};
+\href{https://doi.org/10.6028/NIST.SP.800-86}{[5] NIST SP 800-86};
+\href{https://digital-strategy.ec.europa.eu/en/policies/nis2-directive}{[6] European Commission: NIS 2};
+\href{https://digital-strategy.ec.europa.eu/en/policies/cra-summary}{[7] European Commission: CRA Summary}
+and \href{https://digital-strategy.ec.europa.eu/en/policies/cra-reporting}{Reporting};
+\href{https://doi.org/10.6028/NIST.SP.800-207}{[8] NIST SP 800-207};
+\href{https://doi.org/10.6028/NIST.AI.100-2e2025}{[9] NIST AI 100-2e2025}.
+}
+
+\end{document}

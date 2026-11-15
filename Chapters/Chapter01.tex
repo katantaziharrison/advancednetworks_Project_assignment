@@ -1,82 +1,47 @@
-\chapter{Introduction}
-\label{ch:introduction}
+\chapter{Problem Domain}
+\label{ch:problem-domain}
 
-\section{Background}
-
-The development of mobile communication networks towards
-sixth-generation (6G) systems introduces questions about how
-future wireless capabilities could affect cybersecurity.
-The International Telecommunication Union (ITU) describes
-the framework for International Mobile Telecommunications
-for 2030 and beyond (IMT-2030). Its envisioned usage scenarios
+The development of sixth-generation (6G) mobile networks
+raises questions about how future wireless capabilities
+could affect cybersecurity practice. The International
+Telecommunication Union (ITU) describes the framework
+for International Mobile Telecommunications for 2030
+and beyond (IMT-2030). Its envisioned usage scenarios
 include artificial intelligence (AI) and communication,
 integrated sensing and communication (ISAC), and massive
 communication \citep{itu2023imt2030}.
 
-These capabilities build on an existing foundation of mobile
-network security. The selected fifth-generation (5G) security
-specification defines mechanisms for authentication, access
-security, and protection of subscriber identity
-\citep{threegpp2022security5g}. This provides a baseline for
-examining which security practices could remain applicable
-as network capabilities develop and which practices may
-require further consideration.
+Existing fifth-generation (5G) systems provide a relevant
+starting point for examining these developments.
+The selected 3GPP security specification defines
+mechanisms for authentication, access security, and
+subscriber identity protection
+\citep{threegpp2022security5g}. Research on proposed 6G
+systems identifies further security and privacy concerns
+associated with their enabling technologies and
+applications \citep{porambage2021roadmap}. For example,
+ETSI identifies unauthorized sensing and the protection
+of sensitive sensing information as concerns for ISAC
+\citep{etsi2026isacsecurity}.
 
-\section{Motivation and Problem Statement}
+The problem addressed by this project is how to connect
+these descriptions of emerging capabilities and risks
+to the tasks performed by cybersecurity practitioners.
+A proposed capability does not, by itself, establish
+a new operational security requirement. Assessing its
+implications requires examining the supporting evidence,
+existing protections, and assumptions about deployment.
 
-Research on 6G identifies security and privacy challenges
-associated with proposed network architectures and enabling
-technologies \citep{porambage2021roadmap}. For example,
-research on federated learning examines both its potential
-to support network security and the threats affecting the
-learning process itself \citep{dealwis2026federated}.
-Similarly, the integration of wireless sensing and
-communication raises questions about unauthorized sensing,
-access to sensing results, and the protection of sensitive
-information \citep{etsi2026isacsecurity}.
+This matters because cybersecurity teams need to
+understand which existing practices may remain relevant
+and where future developments could require changes
+to security testing, access control, or monitoring.
 
-For cybersecurity practitioners, these developments raise
-questions about how to secure, test, and monitor future
-wireless systems. Discussing their potential implications
-requires attention to the evidence supporting each claim.
-An established security mechanism, an envisioned capability,
-and a research proposal provide different grounds for
-drawing conclusions about operational requirements.
-
-This project therefore examines how published descriptions
-of proposed 6G capabilities relate to existing 5G security
-practices. It focuses on identifying potential changes to
-practitioner tasks while making the assumptions and
-uncertainties behind those implications explicit.
-
-\section{Aim and Research Question}
-
-The aim of this project is to review emerging cybersecurity
-challenges associated with proposed 6G capabilities and
-examine their potential implications for industry through
-a comparison with established 5G security mechanisms.
-
-The project addresses the following research question:
-
-\begin{quote}
-\emph{How might proposed 6G capabilities change the way
-cybersecurity teams secure, test, and monitor wireless
-networks compared with 5G?}
-\end{quote}
-
-\section{Scope and Intended Contribution}
-
-The review covers three areas: AI in network operations,
-integrated sensing and communication, and large-scale
-Internet of Things (IoT) connectivity. It draws on
-peer-reviewed research and technical documents from
-standardization organizations.
-
-The intended contribution is a comparison matrix linking
-existing 5G security practices to proposed 6G capabilities,
-documented security concerns, and potential implications
-for cybersecurity practitioners. Each comparison will
-identify its supporting sources and distinguish published
-findings from the authors' interpretations. The resulting
-analysis will also identify questions that require further
-evidence from future implementations.
+The investigation will focus on AI in network operations,
+ISAC, and large-scale Internet of Things (IoT)
+connectivity. It will examine published technical
+documents and research, using a specified 5G security
+baseline. Its boundaries are the potential implications
+for securing, testing, and monitoring wireless networks.
+The analysis will remain at the architectural and
+operational level.

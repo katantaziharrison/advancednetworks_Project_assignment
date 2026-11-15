@@ -26,36 +26,36 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[
-		oneside,openany,titlepage,numbers=noenddot,headinclude,%1headlines,
-                footinclude=false,cleardoublepage=empty,
-                BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
-                american, % Languages
-                ]{scrreprt} 
+%\documentclass[
+		%oneside,openany,titlepage,numbers=noenddot,headinclude,%1headlines,
+                %footinclude=false,cleardoublepage=empty,
+                %BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
+               % american, % Languages
+                %]{scrreprt} 
                 
 % Includes the file which contains all the document configurations and packages - make sure to edit this file
-\input{classicthesis-config}
+%\input{classicthesis-config}
 
-\begin{document}
+%\begin{document}
 
-\frenchspacing % Reduces space after periods to make text more compact
+%\frenchspacing % Reduces space after periods to make text more compact
 
-\raggedbottom % Makes all pages the height of the text on that page
+%\raggedbottom % Makes all pages the height of the text on that page
 
-\selectlanguage{american} % Select your default language - e.g. american or ngerman
+%\selectlanguage{american} % Select your default language - e.g. american or ngerman
 
 %\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
 %\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
 
-\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
+%\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
 
-\pagestyle{plain} % Suppress headers for the pre-content pages
+%\pagestyle{plain} % Suppress headers for the pre-content pages
 
 %----------------------------------------------------------------------------------------
 %	PRE-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
 
-\include{FrontBackMatter/Titlepage} % Main title page
+%\include{FrontBackMatter/Titlepage} % Main title page
 
 %\include{FrontBackMatter/Titleback} % Back of the title page
 
@@ -69,14 +69,14 @@
 
 %\cleardoublepage\include{FrontBackMatter/Acknowledgments} % Acknowledgements page
 
-\pagestyle{scrheadings} % Show chapter titles as headings
+%\pagestyle{scrheadings} % Show chapter titles as headings
 
 %\cleardoublepage
-\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+%\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
 
 %\cleardoublepage
 
-\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
+%\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
 %\setcounter{page}{90} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
 
 %\cleardoublepage % Avoids problems with pdfbookmark
@@ -89,10 +89,10 @@
 
 %\part{Some Kind of Manual} % First part of the thesis
 
-\include{Chapters/Chapter01} % Chapter 1
-\include {chapters/Chapter02} % Chapter 2
-\include{Chapters/Chapter03} % Chapter 3
-\include{Chapters/Chapter04} % Chapter 4
+%\include{Chapters/Chapter01} % Chapter 1
+%\include {chapters/Chapter02} % Chapter 2
+%\include{Chapters/Chapter03} % Chapter 3
+%\include{Chapters/Chapter04} % Chapter 4
 
 %\cleardoublepage % Empty page before the start of the next part
 
@@ -122,15 +122,60 @@
 %----------------------------------------------------------------------------------------
 
 %\cleardoublepage
-\include{FrontBackMatter/Bibliography} % Bibliography
+%\include{FrontBackMatter/Bibliography} % Bibliography
 
 %\cleardoublepage\include{FrontBackMatter/Colophon} % Colophon
 
 %\cleardoublepage
-\include{FrontBackMatter/Declaration} % Declaration
+%\include{FrontBackMatter/Declaration} % Declaration
 
 %\cleartoleftpage
-\include{FrontBackMatter/Backpage} % Back cover
+%\include{FrontBackMatter/Backpage} % Back cover
 %----------------------------------------------------------------------------------------
+
+%\end{document}
+\documentclass[
+    oneside,
+    openany,
+    titlepage,
+    numbers=noenddot,
+    headinclude,
+    footinclude=false,
+    cleardoublepage=empty,
+    BCOR=5mm,
+    paper=a4,
+    fontsize=11pt,
+    american
+]{scrreprt}
+
+\input{classicthesis-config}
+
+\begin{document}
+
+\frenchspacing
+\raggedbottom
+\selectlanguage{american}
+
+% Front matter
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\include{FrontBackMatter/Titlepage}
+
+\tableofcontents
+\clearpage
+
+% Proposal
+\pagenumbering{arabic}
+\pagestyle{scrheadings}
+
+\include{Chapters/Chapter01}
+\include{Chapters/Chapter02}
+\include{Chapters/Chapter03}
+\include{Chapters/Chapter04}
+
+% References
+\cleardoublepage
+\include{FrontBackMatter/Bibliography}
 
 \end{document}
